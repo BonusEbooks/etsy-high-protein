@@ -242,16 +242,16 @@
     <div class="container" id="start-area">
         <header>
             <h1>Willkommen!</h1>
-            <p class="subtitle">Schön, dass Sie die High Protein Power-Küche von DeluxeLibrary genießen.</p>
+            <p class="subtitle">Schön, dass du die High Protein Power-Küche von DeluxeLibrary genießt.</p>
         </header>
 
         <main>
             <section class="step-section">
-                <div class="step-label">Ihre Hilfe</div>
-                <h2>Darf ich Sie um einen Gefallen bitten?</h2>
+                <div class="step-label">Deine Hilfe</div>
+                <h2>Darf ich dich um einen Gefallen bitten?</h2>
                 <p style="color: var(--text-gray); margin-bottom: 2rem; line-height: 1.6;">
-                    Als unabhängiger Autor ist Ihr ehrliches Feedback für mich unglaublich wertvoll.
-                    Helfen Sie mir und anderen Kunden mit einer kurzen Bewertung auf Etsy?
+                    Als unabhängiger Autor ist dein ehrliches Feedback für mich unglaublich wertvoll.
+                    Hilfst du mir und anderen Kunden mit einer kurzen Bewertung auf Etsy?
                     Jede ehrliche Stimme zählt!
                 </p>
                 <div class="stars">★★★★★</div>
@@ -262,17 +262,17 @@
                     Zu meinen Einkäufen & Bewertung abgeben
                 </a>
 
-                <p class="small-print">Absolut freiwillig – Ihre Downloads stehen Ihnen so oder so zur Verfügung.</p>
+                <p class="small-print">Absolut freiwillig – deine Downloads stehen dir so oder so zur Verfügung.</p>
             </section>
 
             <section class="step-section">
-                <div class="step-label">Ihre Geschenke</div>
-                <h2>Zu den Bonus-Downloads</h2>
+                <div class="step-label">Dein Bonus</div>
+                <h2>Zur Online-Bibliothek</h2>
                 <p style="color: var(--text-gray); margin-bottom: 2rem;">
-                    Hier geht es direkt zu Ihren 5 exklusiven Bonus-E-Books.
+                    Hier geht es direkt zu den exklusiven Bonus-Rezepten.
                 </p>
                 <button onclick="showDownloads()" class="btn btn-next">
-                    Bonus-Inhalte öffnen &rarr;
+                    JETZT BIBLIOTHEK ÖFFNEN &rarr;
                 </button>
             </section>
         </main>
@@ -281,9 +281,9 @@
     <!-- DOWNLOAD AREA -->
     <div class="container" id="downloads-area">
         <div id="reminder" class="reminder-banner">
-            <p style="color: #fff; font-weight: 700; margin-bottom: 0.5rem;">Haben Sie uns schon kurz unterstützt?</p>
+            <p style="color: #fff; font-weight: 700; margin-bottom: 0.5rem;">Hast du mich schon kurz unterstützt?</p>
             <p style="font-size: 0.95rem; color: var(--text-gray); margin-bottom: 1rem;">
-                Falls Sie es beim ersten Schritt übersprungen haben: Eine ehrliche Bewertung auf Etsy hilft uns sehr!
+                Falls du es beim ersten Schritt übersprungen hast: Eine ehrliche Bewertung auf Etsy hilft mir sehr!
             </p>
             <a href="https://www.etsy.com/your/purchases"
                 target="_blank" rel="noreferrer" class="btn btn-amazon"
@@ -293,8 +293,8 @@
         </div>
 
         <header>
-            <h1>Ihre E-Books</h1>
-            <p class="subtitle">Vielen Dank für Ihre Unterstützung!</p>
+            <h1>Deine Rezepte</h1>
+            <p class="subtitle">Vielen Dank für deine Unterstützung!</p>
         </header>
 
         <div class="grid">
@@ -335,18 +335,18 @@
     </footer>
 
     <script>
-        let amazonClicked = localStorage.getItem('amazon_clicked_B0G1KMD28S') === 'true';
+        let reviewClicked = localStorage.getItem('review_clicked_etsy') === 'true';
 
-        document.getElementById('amazon-btn').addEventListener('click', () => {
-            amazonClicked = true;
-            localStorage.setItem('amazon_clicked_B0G1KMD28S', 'true');
+        document.getElementById('review-btn').addEventListener('click', () => {
+            reviewClicked = true;
+            localStorage.setItem('review_clicked_etsy', 'true');
         });
 
         function showDownloads() {
             document.getElementById('start-area').style.display = 'none';
             document.getElementById('downloads-area').style.display = 'block';
 
-            if (amazonClicked) {
+            if (reviewClicked) {
                 document.getElementById('reminder').style.display = 'none';
             } else {
                 document.getElementById('reminder').style.display = 'block';
